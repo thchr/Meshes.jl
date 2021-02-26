@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Home · Meshes.jl</title><link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Mono" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL="."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="assets/documenter.js"></script><script src="siteinfo.js"></script><script src="../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/documenter-dark.css" data-theme-name="documenter-dark" data-theme-primary-dark/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="assets/themeswap.js"></script><link href="assets/favicon.ico" rel="icon" type="image/x-icon"/><link href="https://fonts.googleapis.com/css?family=Montserrat|Source+Code+Pro&amp;display=swap" rel="stylesheet" type="text/css"/></head><body><div id="documenter"><nav class="docs-sidebar"><a class="docs-logo" href="index.html"><img src="assets/logo.svg" alt="Meshes.jl logo"/></a><div class="docs-package-name"><span class="docs-autofit">Meshes.jl</span></div><form class="docs-search" action="search.html"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li class="is-active"><a class="tocitem" href="index.html">Home</a><ul class="internal"><li><a class="tocitem" href="#Overview"><span>Overview</span></a></li><li><a class="tocitem" href="#Installation"><span>Installation</span></a></li><li><a class="tocitem" href="#Quick-example"><span>Quick example</span></a></li></ul></li><li><span class="tocitem">Reference guide</span><ul><li><a class="tocitem" href="points.html">Points</a></li><li><a class="tocitem" href="vectors.html">Vectors</a></li><li><a class="tocitem" href="angles.html">Angles</a></li><li><input class="collapse-toggle" id="menuitem-2-4" type="checkbox"/><label class="tocitem" for="menuitem-2-4"><span class="docs-label">Geometries</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="geometries/primitives.html">Primitives</a></li><li><a class="tocitem" href="geometries/polytopes.html">Polytopes</a></li></ul></li><li><a class="tocitem" href="meshes.html">Meshes</a></li><li><input class="collapse-toggle" id="menuitem-2-6" type="checkbox"/><label class="tocitem" for="menuitem-2-6"><span class="docs-label">Algorithms</span><i class="docs-chevron"></i></label><ul class="collapsed"><li><a class="tocitem" href="algorithms/sampling.html">Sampling</a></li><li><a class="tocitem" href="algorithms/discretization.html">Discretization</a></li><li><a class="tocitem" href="algorithms/boundbox.html">Bounding box</a></li></ul></li></ul></li><li><span class="tocitem">Contributing</span><ul><li><a class="tocitem" href="contributing/guidelines.html">Guidelines</a></li></ul></li><li><span class="tocitem">About</span><ul><li><a class="tocitem" href="about/license.html">License</a></li></ul></li><li><a class="tocitem" href="links.html">Index</a></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li class="is-active"><a href="index.html">Home</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href="index.html">Home</a></li></ul></nav><div class="docs-right"><a class="docs-edit-link" href="https://github.com/JuliaGeometry/Meshes.jl/blob/master/docs/src/index.md" title="Edit on GitHub"><span class="docs-icon fab"></span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="Meshes.jl"><a class="docs-heading-anchor" href="#Meshes.jl">Meshes.jl</a><a id="Meshes.jl-1"></a><a class="docs-heading-anchor-permalink" href="#Meshes.jl" title="Permalink"></a></h1><p><em>Computational geometry and meshing algorithms in Julia.</em></p><p><a href="https://github.com/JuliaGeometry/Meshes.jl/actions"><img src="https://img.shields.io/github/workflow/status/JuliaGeometry/Meshes.jl/CI?style=flat-square" alt="Build Status"/></a> <a href="https://codecov.io/gh/JuliaGeometry/Meshes.jl"><img src="https://img.shields.io/codecov/c/github/JuliaGeometry/Meshes.jl?style=flat-square" alt="Coverage Status"/></a> <a href="https://JuliaGeometry.github.io/Meshes.jl/stable"><img src="https://img.shields.io/badge/docs-stable-blue?style=flat-square" alt="Stable Documentation"/></a> <a href="https://JuliaGeometry.github.io/Meshes.jl/dev"><img src="https://img.shields.io/badge/docs-latest-blue?style=flat-square" alt="Latest Documentation"/></a> <a href="https://github.com/JuliaGeometry/Meshes.jl/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="License File"/></a></p><h2 id="Overview"><a class="docs-heading-anchor" href="#Overview">Overview</a><a id="Overview-1"></a><a class="docs-heading-anchor-permalink" href="#Overview" title="Permalink"></a></h2><p><a href="https://github.com/JuliaGeometry/Meshes.jl">Meshes.jl</a> provides efficient implementations of concepts from computational geometry and finite element analysis. It promotes rigorous mathematical definitions of spatial discretizations (a.k.a. meshes) that are adequate for describing general manifolds embedded in <span>$\R^n$</span>, including surfaces described with spherical coordinates, and geometries described with multiple coordinate reference systems. Our ambitious goal is to provide all the features of the <a href="https://www.cgal.org">CGAL</a> project in pure Julia.</p><p>Unlike other existing efforts in the Julia ecosystem, this project is being carefully designed to facilitate the use of <em>meshes across different scientific domains</em>. We follow a strict set of good software engineering practices, and are quite pedantic in our test suite to make sure that all our implementations are free of bugs in both single and double floating point precision. Additionally, we guarantee type stability.</p><p>The design of this project was motivated by various issues encountered with past attempts to represent geometry, which have been originally designed for visualization purposes (e.g. <a href="https://github.com/JuliaGeometry/GeometryTypes.jl">GeometryTypes.jl</a>, <a href="https://github.com/JuliaGeometry/GeometryBasics.jl">GeometryBasics.jl</a>) or specifically for finite element analysis (e.g. <a href="https://kristofferc.github.io/JuAFEM.jl/dev/manual/grid">JuAFEM.jl</a>, <a href="https://github.com/PetrKryslUCSD/MeshCore.jl">MeshCore.jl</a>). We hope to provide a smoother experience with mesh representations that are adequate for finite finite element analysis, advanced geospatial modeling <em>and</em> visualization, not just one domain.</p><h2 id="Installation"><a class="docs-heading-anchor" href="#Installation">Installation</a><a id="Installation-1"></a><a class="docs-heading-anchor-permalink" href="#Installation" title="Permalink"></a></h2><p>Get the latest stable release with Julia&#39;s package manager:</p><pre><code class="language-julia">] add Meshes</code></pre><h2 id="Quick-example"><a class="docs-heading-anchor" href="#Quick-example">Quick example</a><a id="Quick-example-1"></a><a class="docs-heading-anchor-permalink" href="#Quick-example" title="Permalink"></a></h2><p>Although we didn&#39;t have time to document the functionality of the package properly, we still would like to illustrate some important features. For more information on available functionality, please consult the <a href="points.html">Reference guide</a> and the <a href="https://github.com/JuliaGeometry/Meshes.jl/tree/master/test">suite of tests</a> in the package.</p><pre><code class="language-julia">using Meshes</code></pre><h3 id="Points-and-vectors"><a class="docs-heading-anchor" href="#Points-and-vectors">Points and vectors</a><a id="Points-and-vectors-1"></a><a class="docs-heading-anchor-permalink" href="#Points-and-vectors" title="Permalink"></a></h3><p>A <a href="points.html#Meshes.Point"><code>Point</code></a> is defined by its coordinates in a global reference system. The type of the coordinates is determined automatically based on the specified literals, or is forced to a specific type using helper constructors (e.g. <code>Point2</code>, <code>Point3</code>, <code>Point2f</code>, <code>Point3f</code>).</p><p>A vector <a href="vectors.html#Meshes.Vec"><code>Vec</code></a> follows the same pattern. It can be constructed with the generic <code>Vec</code> constructor or with the variants <code>Vec2</code> and <code>Vec3</code> for double precision and <code>Vec2f</code> and <code>Vec3f</code> for single precision.</p><pre><code class="language-julia">A = Point(0, 0) # point with integer coordinates
+B = Point(1, 0) # another point in 2D space
+C = Point(0.0, 1.0) # double precision
+D = Point2(0, 1) # double precision from Int literal
+E = Point(1, 2, 3) # a point in 3D space
+F = Point3(1, 2, 3) # another point now with double precision
+G = Point(1f0, 2f0, 3f0) # single precision
+H = Point3f(1, 2, 3) # single precision from Int literal
+
+for P in (A,B,C,D,E,F,G,H)
+  println(&quot;Coordinate type: &quot;, coordtype(P))
+  println(&quot;Embedding dimension: &quot;, embeddim(P))
+end</code></pre><pre class="documenter-example-output">Coordinate type: Int64
+Embedding dimension: 2
+Coordinate type: Int64
+Embedding dimension: 2
+Coordinate type: Float64
+Embedding dimension: 2
+Coordinate type: Float64
+Embedding dimension: 2
+Coordinate type: Int64
+Embedding dimension: 3
+Coordinate type: Float64
+Embedding dimension: 3
+Coordinate type: Float32
+Embedding dimension: 3
+Coordinate type: Float32
+Embedding dimension: 3</pre><p>Points can be subtracted to produce a vector:</p><pre><code class="language-julia">B - A</code></pre><pre class="documenter-example-output">2-element StaticArrays.SArray{Tuple{2},Int64,1,2} with indices SOneTo(2):
+ 1
+ 0</pre><p>They can&#39;t be added, but their coordinates can:</p><pre><code class="language-julia">coordinates(G) + coordinates(H)</code></pre><pre class="documenter-example-output">3-element StaticArrays.SArray{Tuple{3},Float32,1,3} with indices SOneTo(3):
+ 2.0
+ 4.0
+ 6.0</pre><p>We can add a point to a vector though, and get a new point:</p><pre><code class="language-julia">G + Vec3f(1,1,1)</code></pre><pre class="documenter-example-output">Point(2.0f0, 3.0f0, 4.0f0)</pre><p>And finally, we can create points at random with:</p><pre><code class="language-julia">ps = rand(Point2, 10)</code></pre><pre class="documenter-example-output">10-element Array{Point{2,Float64},1}:
+ Point(0.5875006797956095, 0.7919515224571472)
+ Point(0.6670399508492408, 0.7336320832078722)
+ Point(0.7698326018138366, 0.9539495121931818)
+ Point(0.8123208285850065, 0.21826561897476981)
+ Point(0.32331802425462697, 0.6944469313963935)
+ Point(0.040266306641943306, 0.8111117930675278)
+ Point(0.34808695697252046, 0.32197227537591)
+ Point(0.7052246672793654, 0.4312541591230894)
+ Point(0.6501145656769103, 0.4265287080361211)
+ Point(0.6111391433849138, 0.4861975681117785)</pre><h3 id="Primitives"><a class="docs-heading-anchor" href="#Primitives">Primitives</a><a id="Primitives-1"></a><a class="docs-heading-anchor-permalink" href="#Primitives" title="Permalink"></a></h3><p>Primitive geometries such as <a href="geometries/primitives.html#Meshes.Box"><code>Box</code></a>, <a href="geometries/primitives.html#Meshes.Ball"><code>Ball</code></a>, <a href="geometries/primitives.html#Meshes.Sphere"><code>Sphere</code></a>, <a href="geometries/primitives.html#Meshes.Cylinder"><code>Cylinder</code></a> are those geometries that can be efficiently represented in a computer without discretization. We can construct such geometries using clean syntax:</p><pre><code class="language-julia">b = Box((0,0), (1,1))</code></pre><pre class="documenter-example-output">Box{2,Int64}(Point(0, 0), Point(1, 1))</pre><pre><code class="language-julia">s = Sphere((0,0), 1)</code></pre><pre class="documenter-example-output">Sphere{2,Int64}(Point(0, 0), 1)</pre><p>The parameters of these primitive geometries can be queried easily:</p><pre><code class="language-julia">extrema(b)</code></pre><pre class="documenter-example-output">(Point(0, 0), Point(1, 1))</pre><pre><code class="language-julia">center(s), radius(s)</code></pre><pre class="documenter-example-output">(Point(0, 0), 1)</pre><p>As well as their measure (e.g. area, volume) and other geometric properties:</p><pre><code class="language-julia">measure(b) == 1</code></pre><pre class="documenter-example-output">true</pre><p>We can sample random points on primitives using different methods:</p><pre><code class="language-julia">vs = sample(s, RegularSampling(10)) # 10 points over the sphere</code></pre><pre class="documenter-example-output">IterTools.IVec{Base.Generator{StepRangeLen{Float64,Base.TwicePrecision{Float64},Base.TwicePrecision{Float64}},Meshes.var&quot;#95#97&quot;{Point{2,Int64},Meshes.var&quot;#r⃗#96&quot;{Int64,DataType}}}}(Base.Generator{StepRangeLen{Float64,Base.TwicePrecision{Float64},Base.TwicePrecision{Float64}},Meshes.var&quot;#95#97&quot;{Point{2,Int64},Meshes.var&quot;#r⃗#96&quot;{Int64,DataType}}}(Meshes.var&quot;#95#97&quot;{Point{2,Int64},Meshes.var&quot;#r⃗#96&quot;{Int64,DataType}}(Point(0, 0), Meshes.var&quot;#r⃗#96&quot;{Int64,DataType}(1, Float64)), 0.0:0.6283185307179586:5.654866776461628))</pre><p>And collect the generator with:</p><pre><code class="language-julia">collect(vs)</code></pre><pre class="documenter-example-output">10-element Array{Point{2,Float64},1}:
+ Point(1.0, 0.0)
+ Point(0.8090169943749475, 0.5877852522924731)
+ Point(0.30901699437494745, 0.9510565162951535)
+ Point(-0.30901699437494734, 0.9510565162951536)
+ Point(-0.8090169943749473, 0.5877852522924732)
+ Point(-1.0, 1.2246467991473532e-16)
+ Point(-0.8090169943749475, -0.587785252292473)
+ Point(-0.30901699437494756, -0.9510565162951535)
+ Point(0.30901699437494723, -0.9510565162951536)
+ Point(0.8090169943749473, -0.5877852522924734)</pre><h3 id="Polytopes"><a class="docs-heading-anchor" href="#Polytopes">Polytopes</a><a id="Polytopes-1"></a><a class="docs-heading-anchor-permalink" href="#Polytopes" title="Permalink"></a></h3><p>Polytopes are geometries with &quot;flat&quot; sides. They generalize polygons and polyhedra. Most commonly used polytopes are already defined in the project, including <a href="geometries/polytopes.html#Meshes.Triangle"><code>Triangle</code></a>, <a href="geometries/polytopes.html#Meshes.Pyramid"><code>Pyramid</code></a>, <a href="geometries/polytopes.html#Meshes.Quadrangle"><code>Quadrangle</code></a>, <a href="geometries/polytopes.html#Meshes.Segment"><code>Segment</code></a>, <a href="geometries/polytopes.html#Meshes.Tetrahedron"><code>Tetrahedron</code></a>, and <a href="geometries/polytopes.html#Meshes.Hexahedron"><code>Hexahedron</code></a>. Their vertices follow the <a href="meshes.html#Meshes.GMSH"><code>GMSH</code></a> ordering convention by default, but this is also customizable.</p><pre><code class="language-julia">t = Triangle((0,0), (1,0), (0,1))</code></pre><pre class="documenter-example-output">Triangle{2,Int64}
+  └─Point(0, 0)
+  └─Point(1, 0)
+  └─Point(0, 1)</pre><p>Some of these geometries have additional functionality like the measure (or area):</p><pre><code class="language-julia">measure(t) == area(t) == 1/2</code></pre><pre class="documenter-example-output">true</pre><p>Or the ability to know whether or not a point is inside:</p><pre><code class="language-julia">p = Point(0.5, 0.0)
+
+p ∈ t</code></pre><pre class="documenter-example-output">true</pre><p>For line segments, for example, we have robust intersection algorithms:</p><pre><code class="language-julia">s1 = Segment((0.0,0.0), (1.0,0.0))
+s2 = Segment((0.5,0.0), (2.0,0.0))
+
+s1 ∩ s2</code></pre><pre class="documenter-example-output">Segment{2,Float64}
+  └─Point(0.5, 0.0)
+  └─Point(1.0, 0.0)</pre><p>Polytopes are widely used in GIS software under names such as &quot;LineString&quot; and &quot;Polygon&quot;. We provide robust implementations of these concepts, which are formally known as polygonal <a href="geometries/polytopes.html#Meshes.Chain"><code>Chain</code></a> and <a href="geometries/polytopes.html#Meshes.PolyArea"><code>PolyArea</code></a>.</p><p>We can compute the orientation of a chain as clockwise or counter-clockwise, can open and close the chain, create bridges between the various inner rings with the outer ring, and other useful functionality:</p><pre><code class="language-julia">p = PolyArea(Point2[(0,0), (2,0), (2,2), (1,3), (0,2), (0,0)])</code></pre><pre class="documenter-example-output">PolyArea{2,Float64}
+  outer
+    └─6-chain</pre><p>The orientation of the above polygonal area is counter-clockwise (CCW):</p><pre><code class="language-julia">orientation(p)</code></pre><pre class="documenter-example-output">1-element Array{Symbol,1}:
+ :CCW</pre><p>We can get the outer polygonal chain, and reverse it:</p><pre><code class="language-julia">c = chains(p)[1]
+
+reverse(c)</code></pre><pre class="documenter-example-output">6-chain{2,Float64}
+  └─Point(0.0, 0.0)
+  └─Point(0.0, 2.0)
+  └─Point(1.0, 3.0)
+  └─Point(2.0, 2.0)
+  └─Point(2.0, 0.0)
+  └─Point(0.0, 0.0)</pre><p>A closed chain (a.k.a. ring) has circular vertices:</p><pre><code class="language-julia">v = vertices(c)</code></pre><pre class="documenter-example-output">5-element CircularVector(view(::Array{Point{2,Float64},1}, 1:5)):
+ Point(0.0, 0.0)
+ Point(2.0, 0.0)
+ Point(2.0, 2.0)
+ Point(1.0, 3.0)
+ Point(0.0, 2.0)</pre><p>This means that we can index the vertices with indices that go beyond the range <code>1:nvertices(c)</code>. This is very useful for writing algorithms:</p><pre><code class="language-julia">v[1:10]</code></pre><pre class="documenter-example-output">10-element CircularVector(::Array{Point{2,Float64},1}):
+ Point(0.0, 0.0)
+ Point(2.0, 0.0)
+ Point(2.0, 2.0)
+ Point(1.0, 3.0)
+ Point(0.0, 2.0)
+ Point(0.0, 0.0)
+ Point(2.0, 0.0)
+ Point(2.0, 2.0)
+ Point(1.0, 3.0)
+ Point(0.0, 2.0)</pre><p>We can also compute angles of any given chain, no matter if it is open or closed:</p><pre><code class="language-julia">angles(c) * 180 / pi</code></pre><pre class="documenter-example-output">5-element Array{Float64,1}:
+  -90.0
+  -90.0
+ -135.0
+  -90.0
+ -135.0</pre><p>The sign of these angles is a function of the orientation:</p><pre><code class="language-julia">angles(reverse(c)) * 180 / pi</code></pre><pre class="documenter-example-output">5-element Array{Float64,1}:
+  90.0
+ 135.0
+  90.0
+ 135.0
+  90.0</pre><p>In case of closed chains, we can compute inner angles as well:</p><pre><code class="language-julia">innerangles(c) * 180 / pi</code></pre><pre class="documenter-example-output">5-element Array{Float64,1}:
+  90.0
+  90.0
+ 135.0
+  90.0
+ 135.0</pre><p>And there is a lot more functionality available like for instance determining whether or not a polygonal area or chain is simple:</p><pre><code class="language-julia">issimple(p)</code></pre><pre class="documenter-example-output">true</pre><h3 id="Meshes"><a class="docs-heading-anchor" href="#Meshes">Meshes</a><a id="Meshes-1"></a><a class="docs-heading-anchor-permalink" href="#Meshes" title="Permalink"></a></h3><p>Efficient (lazy) mesh representations are provided, including <a href="meshes.html#Meshes.CartesianGrid"><code>CartesianGrid</code></a> and <a href="meshes.html#Meshes.UnstructuredMesh"><code>UnstructuredMesh</code></a>:</p><pre><code class="language-julia">g = CartesianGrid(100, 100)</code></pre><pre class="documenter-example-output">100×100 CartesianGrid{2,Float64}
+  minimum: Point(0.0, 0.0)
+  maximum: Point(100.0, 100.0)
+  spacing: (1.0, 1.0)</pre><p>No memory is allocated:</p><pre><code class="language-julia">@allocated CartesianGrid(10000, 10000, 10000)</code></pre><pre class="documenter-example-output">0</pre><p>but we can still loop over the elements, which are quadrangles in 2D:</p><pre><code class="language-julia">collect(elements(g))</code></pre><pre class="documenter-example-output">10000-element Array{Quadrangle{2,Float64,Array{Point{2,Float64},1}},1}:
+ Quadrangle(Point(0.0, 0.0), Point(1.0, 0.0), Point(1.0, 1.0), Point(0.0, 1.0))
+ Quadrangle(Point(1.0, 0.0), Point(2.0, 0.0), Point(2.0, 1.0), Point(1.0, 1.0))
+ Quadrangle(Point(2.0, 0.0), Point(3.0, 0.0), Point(3.0, 1.0), Point(2.0, 1.0))
+ Quadrangle(Point(3.0, 0.0), Point(4.0, 0.0), Point(4.0, 1.0), Point(3.0, 1.0))
+ Quadrangle(Point(4.0, 0.0), Point(5.0, 0.0), Point(5.0, 1.0), Point(4.0, 1.0))
+ Quadrangle(Point(5.0, 0.0), Point(6.0, 0.0), Point(6.0, 1.0), Point(5.0, 1.0))
+ Quadrangle(Point(6.0, 0.0), Point(7.0, 0.0), Point(7.0, 1.0), Point(6.0, 1.0))
+ Quadrangle(Point(7.0, 0.0), Point(8.0, 0.0), Point(8.0, 1.0), Point(7.0, 1.0))
+ Quadrangle(Point(8.0, 0.0), Point(9.0, 0.0), Point(9.0, 1.0), Point(8.0, 1.0))
+ Quadrangle(Point(9.0, 0.0), Point(10.0, 0.0), Point(10.0, 1.0), Point(9.0, 1.0))
+ ⋮
+ Quadrangle(Point(91.0, 99.0), Point(92.0, 99.0), Point(92.0, 100.0), Point(91.0, 100.0))
+ Quadrangle(Point(92.0, 99.0), Point(93.0, 99.0), Point(93.0, 100.0), Point(92.0, 100.0))
+ Quadrangle(Point(93.0, 99.0), Point(94.0, 99.0), Point(94.0, 100.0), Point(93.0, 100.0))
+ Quadrangle(Point(94.0, 99.0), Point(95.0, 99.0), Point(95.0, 100.0), Point(94.0, 100.0))
+ Quadrangle(Point(95.0, 99.0), Point(96.0, 99.0), Point(96.0, 100.0), Point(95.0, 100.0))
+ Quadrangle(Point(96.0, 99.0), Point(97.0, 99.0), Point(97.0, 100.0), Point(96.0, 100.0))
+ Quadrangle(Point(97.0, 99.0), Point(98.0, 99.0), Point(98.0, 100.0), Point(97.0, 100.0))
+ Quadrangle(Point(98.0, 99.0), Point(99.0, 99.0), Point(99.0, 100.0), Point(98.0, 100.0))
+ Quadrangle(Point(99.0, 99.0), Point(100.0, 99.0), Point(100.0, 100.0), Point(99.0, 100.0))</pre><p>We can construct a general unstructured mesh with a global vector of points and a collection of <a href="meshes.html#Meshes.Connectivity"><code>Connectivity</code></a> that store the indices to the global vector of points:</p><pre><code class="language-julia">points = Point2[(0,0), (1,0), (0,1), (1,1), (0.25,0.5), (0.75,0.5)]
+tris  = connect.([(3,1,5),(4,6,2)], Triangle)
+quads = connect.([(1,2,5,6),(5,6,3,4)], Quadrangle)
+mesh = UnstructuredMesh(points, [tris; quads])</code></pre><pre class="documenter-example-output">4 UnstructuredMesh{2,Float64}
+  6 vertices
+    └─Point(0.0, 0.0)
+    └─Point(1.0, 0.0)
+    └─Point(0.0, 1.0)
+    └─Point(1.0, 1.0)
+    └─Point(0.25, 0.5)
+    └─Point(0.75, 0.5)
+  4 faces
+    └─Triangle(3, 1, 5)
+    └─Triangle(4, 6, 2)
+    └─Quadrangle(1, 2, 5, 6)
+    └─Quadrangle(5, 6, 3, 4)</pre><p>The actual geometries of the elements are materialized in a lazy fashion like with the Cartesian grid:</p><pre><code class="language-julia">collect(elements(mesh))</code></pre><pre class="documenter-example-output">4-element Array{Polytope{2,2,Float64},1}:
+ Triangle(Point(0.0, 1.0), Point(0.0, 0.0), Point(0.25, 0.5))
+ Triangle(Point(1.0, 1.0), Point(0.75, 0.5), Point(1.0, 0.0))
+ Quadrangle(Point(0.0, 0.0), Point(1.0, 0.0), Point(0.25, 0.5), Point(0.75, 0.5))
+ Quadrangle(Point(0.25, 0.5), Point(0.75, 0.5), Point(0.0, 1.0), Point(1.0, 1.0))</pre></article><nav class="docs-footer"><a class="docs-footer-nextpage" href="points.html">Points »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Friday 26 February 2021 23:05">Friday 26 February 2021</span>. Using Julia version 1.5.3.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>

@@ -33,3 +33,27 @@ function intersecttype(b1::Box{Dim,T}, b2::Box{Dim,T}) where {Dim,T}
     FaceTouchingBoxes(Box(u, v))
   end
 end
+
+struct RayBoxIntersection{T<:Real}
+  bool::Bool
+  tmin::T
+  tmax::T
+end
+function intersect(b::Box{Dim}, r::Ray{Dim}) where Dim
+  # branchless ray-box intersection following https://tavianator.com/2011/ray_box.html
+  v⁻¹ = 1./r.v
+
+  tₓ₁ = (b.min[1] - r.p[1]) * v⁻¹[1]
+  tₓ₂ = (b.max[1] - r.p[1]) * v⁻¹[1]
+  tmin = min(tₓ₁, tₓ₂)
+  tmax = max(tₓ₁, tₓ₂)
+
+  @inbounds for i in ntuple(j->j+1, Val(Dim-1))
+    tᵢ₁ = (b.min[i] - r.p[i]) * v⁻¹[i]
+    tᵢ₂ = (b.max[i] - r.p[i]) * v⁻¹[i]
+    tmin = max(tmin, min(tᵢ₁, tᵢ₂))
+    tmax = min(tmax, max(tᵢ₁, tᵢ₂))
+  end
+
+  return BoxRayIntersection{eltype{tmin}}(tmax ≥ tmin, tmin, tmax)
+end
